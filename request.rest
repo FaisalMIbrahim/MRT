@@ -1,0 +1,142 @@
+POST  http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "nama" : "Super Admin",
+    "username": "superadmin",
+    "password" : "12345678",
+    "confPassword" : "12345678",
+    "email" :  "superadmin@gmail.com",
+    "no_telp" : "0859371111",
+    "role" : "super_admin"
+  
+}
+###
+POST  http://localhost:5000/register
+Content-Type: application/json
+
+{
+    "name" : "Faisal Muhammad Ibrahim",
+    "username": "faisal",
+    "email" :  "faisal@gmail.com",
+    "password" : "12345678",
+    "confPassword" : "12345678"
+}
+###
+DELETE http://localhost:5000/robot/delete/1
+
+###
+Get  http://localhost:5000/users/926042c8-16d1-4f1b-98fe-623e206f463b
+###
+Get  http://localhost:5000/users/a0b3aa01-e3f0-4a08-b5f0-b3c2724956d4
+
+//get Stasiun
+###
+GET  http://localhost:5000/stasiun
+###
+POST  http://localhost:5000/stasiun
+Content-Type: application/json
+
+{
+    "kode_stasiun" : "LBH",
+    "nama_stasiun" : "Lebak Bulus"
+}
+
+###
+
+///updateUser
+PATCH   http://localhost:5000/users/edit/2
+Content-Type: application/json
+
+{
+   
+    "nama" : "Faisal Muhammad Ibrahim",
+    "username": "faisalmi",
+    "password" : "12345678",
+    "confPassword" : "12345678",
+    "email" :  "faisal@gmail.com",
+    "no_telp" : "0859866557",
+    "role" : "admin"
+}
+
+//deleeted
+###
+DELETE   http://localhost:5000/users/3b00b784-8d21-44a2-a6f4-905fae7c49e4
+###
+//login Users
+POST  http://localhost:5000/login
+Content-Type: application/json
+
+{
+    
+    "email" :  "fmi@gmail.com",
+    "password" : "12345678"
+    
+}
+###
+//login admin
+POST  http://localhost:5000/login
+Content-Type: application/json
+
+{
+    
+  
+   "username" : "superadmin",
+    "password" : "12345678"
+
+    
+}
+
+///me
+###
+get  http://localhost:5000/me
+###
+DELETE  http://localhost:5000/logout
+
+
+//Robot
+###
+POST  http://localhost:5000/robot
+Content-Type: application/json
+
+{
+   "id_robot" : "RP2303",
+   "status" : "Inactive",
+   "in_use" : "no",
+   "station" : "LBH",
+   "system_state" : "off",
+   "inverter_state" : "off",
+   "emergency_state" : "off",
+   "state_modified_by" : "web"
+}
+###
+PATCH http://localhost:5000/robot/edit/2
+Content-Type: application/json
+
+{
+   "id_robot" : "RP2302",
+   "status" : "Inactive",
+   "in_use" : "no",
+   "station" : "LBH",
+   "system_state" : "off",
+   "inverter_state" : "off",
+   "emergency_state" : "off",
+   "state_modified_by" : "web"
+}
+
+//getrobot
+###
+GET http://localhost:5000/robot
+
+//getrobotbyid
+###
+GET http://localhost:5000/robot/2
+
+//delete
+###
+DELETE  http://localhost:5000/robot/delete/3
+
+
+//In use
+###
+PATCH  http://localhost:5000/robot/inuse/4
