@@ -1,0 +1,21 @@
+.sidenav .sidenav-menu .nav .sidenav-menu-nested {
+  flex-direction: column;
+  margin-left: 1.4375rem;
+  border-left-style: solid;
+  border-left-width: thin;
+  padding-left: 0.5625rem;
+}
+.sidenav .sidenav-footer {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  height: 7rem;
+  top: 100rem;
+}
+
+.top {
+  position: relative;
+  margin-top: 200%;
+}
